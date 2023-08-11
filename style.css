@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  background-color: #f3f3f3;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.keyboard {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.keyboard-input {
+  display: block;
+  grid-column: 1/-1;
+  padding: 2rem;
+  font-size: inherit;
+  height: 80%;
+  border: none;
+}
+.keys-container {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(15, 7fr);
+  gap: 0.5rem;
+}
+.keyboard-key {
+  font-size: inherit;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: rgb(80, 80, 80);
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: 0.2s;
+}
+
+.keyboard-key--dark {
+  background-color: rgb(40, 40, 40);
+}
+.keyboard-key--wide {
+  grid-column: span 2;
+}
+.keyboard-key--very--wide {
+  grid-column: span 5;
+}
+.keyboard-key--wide-shift {
+  grid-column: span 3;
+}
+
+.keyboard-key:active {
+  background: rgb(112, 112, 112);
+}
+/* .keyboard-key:active:focus {
+  background: rgb(112, 112, 112);
+} */
+.keyboard-key--active2 {
+  position: relative;
+}
+.keyboard-key--active {
+  background: rgb(112, 112, 112);
+}
+
+.keyboard-key-capslock::after {
+  content: "";
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: lightgreen;
+  border-radius: 50%;
+}
+
+.description {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
